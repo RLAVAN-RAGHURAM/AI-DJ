@@ -33,7 +33,17 @@ console.log("rightwristX"+rightwristX+"rightwristY"+rightwristY);
 }
 
 function draw(){
-image(video,0,0,600,500);   
+image(video,0,0,600,500);  
+fill("#d40206");
+stroke("#d40206");
+
+circle(leftwristX,leftwristY,20);
+
+InNumbers= Number(leftwristY);
+withoutdecimel=floor(InNumbers);
+volume=withoutdecimel/500;
+document.getElementById("volume").innerHTML="VOLUME"+volume;
+song.setVolume(volume);
 }
 
 function play(){
